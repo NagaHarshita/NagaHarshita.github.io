@@ -6,5 +6,3 @@ img: assets/img/1.jpg
 importance: 4
 category: Project
 ---
-
-
