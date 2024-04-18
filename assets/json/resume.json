@@ -67,7 +67,10 @@
       "startDate": "2023-06",
       "endDate": "2024-05",
       "summary": "Speech Recognition for Cognitive Sciences",
-      "highlights": ["NLP"]
+      "highlights": ["Crafted a comparison report detailing 15+ open-source libraries for speech recognition with a specific focus on resource allocation, performance metrics, and benchmark analysis",
+      "Engineered an efficient pipeline to provide video transcription with speaker distinction for cognitive sciences",
+      "Integrated the video transcription outcomes into a React application, offering an intuitive visual representation",
+      "Spearheaded the development of an interactive dashboard for a Laboratory Information Management System (LIMS) project, adhering to the principles of Test-Driven Development (TDD)"]
     },
     {
       "name": "Josh Talks",
@@ -76,7 +79,10 @@
       "startDate": "2021-12",
       "endDate": "2022-06",
       "summary": "Real-time voice calling application",
-      "highlights": ["Django"]
+      "highlights": ["Designed and implemented a group voice-calling feature, enabling customizable speaker and listener settings",
+      "Conducted a successful pilot for multiple audio chat rooms, each accommodating over 100 participants",
+      "Contributed to configuring virtual machine instances, setting up CI/CD pipelines with Cloud Build trigger, and databases with cloud SQL auth proxy in Google Cloud Platform",
+      "Programmed SQL views and queries to enhance the user engagement by scheduling engagement notifications based on user inactivity and analyze the million-user database for daily and monthly active users"]
     }
   ],
   "volunteer": [
