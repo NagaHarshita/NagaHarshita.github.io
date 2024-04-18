@@ -10,4 +10,4 @@ redirect: https://github.com/krishnadheerajkrovi/CSCI544_NLP_Project
 
 - Trained a bi-directional GRU model to predict the toxicity score of scraped 100k reddit comments
 - Implemented a novel algorithm that leverages POS tags to generate candidate sentences for offensive text and fine-tuned
-DistilRoBERTa model to fill the masked words of the candidate sentences
+  DistilRoBERTa model to fill the masked words of the candidate sentences

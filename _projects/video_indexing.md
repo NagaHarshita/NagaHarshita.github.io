@@ -8,4 +8,3 @@ category: Project
 related_publications: false
 redirect: https://github.com/NagaHarshita/VideoIndexing
 ---
-
