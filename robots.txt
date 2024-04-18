@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://NagaHarshita.github.io/sitemap.xml
+Sitemap: https://NagaHarshita.github.io//sitemap.xml
