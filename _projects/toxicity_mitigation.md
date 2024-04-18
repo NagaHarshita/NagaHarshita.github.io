@@ -5,7 +5,7 @@ description: Rephrasing the offensive comments in Reddit
 img: assets/img/7.jpg
 importance: 3
 category: Project
-redirect: https://github.com/krishnadheerajkrovi/CSCI544_NLP_Projects
+redirect: https://github.com/krishnadheerajkrovi/CSCI544_NLP_Project
 ---
 
 - Trained a bi-directional GRU model to predict the toxicity score of scraped 100k reddit comments
