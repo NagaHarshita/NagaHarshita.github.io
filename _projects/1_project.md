@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Video Indexing
+description: Video Search using a query video
 img: assets/img/12.jpg
 importance: 1
-category: work
-related_publications: true
+category: Media
+related_publications: false
 ---
 
 Every project has a beautiful feature showcase page.

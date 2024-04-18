@@ -1,11 +1,10 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
+title: Eliminating toxicity in social media
+description: Rephrasing the offensive comments in Reddit
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
-category: work
+category: Deep Learning
 ---
 
 Every project has a beautiful feature showcase page.
