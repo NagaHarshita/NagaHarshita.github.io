@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: Event Finder
+description: Event Booking Application 
 img: assets/img/3.jpg
 importance: 2
-category: work
-giscus_comments: true
+category: FullStack
+giscus_comments: false
 ---
 
 Every project has a beautiful feature showcase page.

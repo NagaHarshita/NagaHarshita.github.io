@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 6
+title: Time Series Calculation
 description: a project with no image
-img:
+img: assets/img/1.jpg
 importance: 4
-category: fun
+category: Data Science
 ---
 
 Every project has a beautiful feature showcase page.
