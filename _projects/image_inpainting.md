@@ -3,9 +3,20 @@ layout: distill
 title: Image Inpainting using Deep Learning 
 description: Image Inpainting using Deep Learning 
 tags: distill formatting
-img: assets/img/1.jpg
-importance: 3
-category: Deep Learning
+featured: true
+date: 2022-02-20
+
+authors:
+  - name: Naga Harshita Marupaka
+    url: "https://www.linkedin.com/in/nagaharshitamarupaka/"
+    affiliations:
+      name: IIITS
+  - name: Abhinay Bathina
+    affiliations:
+      name: IIITS
+  - name: Hemanth Krishna Balineni
+    affiliations:
+      name: IIITS
 
 toc:
   - name: Problem Statement
@@ -14,9 +25,29 @@ toc:
   - name: Learning-based Techniques
   - name: Vision Transformers
   - name: Thesis Project
+  - name: Gated Convolution  
+  - name: TransGAN
+#   subsections:
+#     - name: Gated Convolution   
+    # subsections:
+    #   - name: Dataset and Preprocessing
+    #   - name: Model
+    #   - name: Architecture
+    #   - name: Training Information
+    #   - name: Results
+    #   - name: Limitations
+    # - name: TransGAN
+    # subsections:
+    #   - name: Dataset and Preprocessing
+    #   - name: Model
+    #   - name: Architecture
+    #   - name: Training Information
+    #   - name: Results
+    #   - name: Limitations
   - name: Transformer vs CNN
   - name: Results
 ---
+
 ## Problem statement
 
 Image Inpainting is a technique for reconstructing an image's missing pixels or missing regions. This approach is used to either delete an object from a picture or recover the image's corrupted elements. These are being used in the form of 3D image inpainting in medical images and AR/VR technologies in recent trends. It's a significant solution to remove image occlusions. Object removal, picture restoration, modification, re-targeting, compositing, and image-based rendering are among the imaging and graphics applications that use it. Our main goal is to construct an efficient and robust inpainter by leveraging the most recent and proven architectures and techniques in computer vision. 
@@ -74,11 +105,11 @@ The optimizer's decision, network depth, and dataset-specific hyperparameters al
 
 In machine learning, a transformer is a deep learning model that uses attention mechanisms to weigh the significance of each part of the input data differently. Machine learning transformers are made up of many self-attention layers. Natural language processing (NLP) and computer vision are two AI subfields that employ them extensively (CV).
 
-## About Our BTP
+## Thesis Project
 
 We have chosen a paper to work on [6]. We trained our model using the techniques Gated convolution and SN patch-based GAN. Our team with our mentor has agreed to work on the paper “Free-form image inpainting using gated convolution”.
 
-### Gated Convolution
+## Gated Convolution
 
 #### Dataset and Preprocessing
 
@@ -267,7 +298,7 @@ Our model didn’t produce great results for the images mentioned in Fig 16. In 
 
 #### Conclusion
 
-**	For the problem statement, we have taken i.e., Image Inpainting using Deep Learning
+For the problem statement, we have taken i.e., Image Inpainting using Deep Learning
 
 techniques, we have trained a model using Spectral Normalisation Patch GAN using 
 
@@ -275,7 +306,7 @@ Gated convolution and Self Attention. During the training of this model, Generat
 
 tested using different masks and different resolutions. The results obtained from 	testing with different types of images was satisfactory with good ssim values. 
 
-### TransGAN
+## TransGAN
 
 #### Dataset and Preprocessing
 
@@ -318,9 +349,9 @@ GAN is based exclusively on Transformer architectures and does not require convo
 |**Stage**|**Layer**|**Input Shape**|**Output Shape**|
 | - | - | - | - |
 |-|Image|512|(8 x 8) x 1024|
-|<p></p><p></p><p>1</p>|<p>Block</p><p>Block</p><p>Block</p><p>Block</p><p>Block</p>|<p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p>|<p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p>|
-|<p></p><p></p><p>2</p>|<p>PixelShuffle</p><p>Block</p><p>Block</p><p>Block</p><p>Block</p>|<p>(8 x 8) x 1024</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p>|<p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p>|
-|<p></p><p>3</p>|<p>PixelShuffle</p><p>Block</p><p>Block</p>|<p>(16 x 16) x 256</p><p>(32 x 32) x 64</p><p>(32 x 32) x 64</p>|<p>(32 x 32) x 64</p><p>(32 x 32) x 64</p><p>(32 x 32) x 64</p>|
+|<br><br>1<br>|Block<br>Block<br>Block<br>Block<br>Block<br>|(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>|(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>|
+|<br><br>2<br>|PixelShuffle<br>Block<br>Block<br>Block<br>Block<br>|(8 x 8) x 1024<br>(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>|(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>|
+|<br>3<br>|PixelShuffle<br>Block<br>Block<br>|(16 x 16) x 256<br>(32 x 32) x 64<br>(32 x 32) x 64<br>|(32 x 32) x 64<br>(32 x 32) x 64<br>(32 x 32) x 64<br>|
 |-|Linear Layer|(32 x 32) x 64|32 x 32 x 3|
 
 **Discriminator**
@@ -329,9 +360,9 @@ GAN is based exclusively on Transformer architectures and does not require convo
 |**Stage**|**Layer**|**Input Shape**|**Output Shape**|
 | - | - | - | - |
 |-|Linear Layer|(32 x 32) x 64|(16 x 16) x 192|
-|<p></p><p></p><p>1</p>|<p>Block</p><p>Block</p><p>Block</p><p>AvgPooling</p><p>Concatenate</p>|<p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(8 x 8) x 192</p>|<p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(8 x 8) x 192</p><p>(8 x 8) x 384</p>|
-|<p></p><p>2</p>|<p>Block</p><p>Block</p><p>Block</p>|<p>(8 x 8) x 384</p><p>(8 x 8) x 384</p><p>(8 x 8) x 384</p>|<p>(8 x 8) x 384</p><p>(8 x 8) x 384</p><p>(8 x 8) x 384</p>|
-|<p></p><p>-</p><p></p>|<p>Add CLS Token</p><p>Block</p><p>CLS Head</p>|<p>(8 x 8) x 384</p><p>(8 x 8 + 1) x 384</p><p>1 x 384</p>|<p>(8 x 8 + 1) x 384</p><p>(8 x 8 + 1) x 384</p><p>1</p>|
+|<br><br>1<br>|Block<br>Block<br>Block<br>AvgPooling<br>Concatenate<br>|(16 x 16) x 192<br>(16 x 16) x 192<br>(16 x 16) x 192<br>(16 x 16) x 192<br>(8 x 8) x 192<br>|(16 x 16) x 192<br>(16 x 16) x 192<br>(16 x 16) x 192<br>(8 x 8) x 192<br>(8 x 8) x 384<br>|
+|<br>2<br>|Block<br>Block<br>Block<br>|(8 x 8) x 384<br>(8 x 8) x 384<br>(8 x 8) x 384<br>|(8 x 8) x 384<br>(8 x 8) x 384<br>(8 x 8) x 384<br>|
+|<br>-<br><br>|Add CLS Token<br>Block<br>CLS Head<br>|(8 x 8) x 384<br>(8 x 8 + 1) x 384<br>1 x 384<br>|(8 x 8 + 1) x 384<br>(8 x 8 + 1) x 384<br>1<br>|
 
 
 #### Training Information

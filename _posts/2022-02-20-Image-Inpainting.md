@@ -6,6 +6,18 @@ tags: distill formatting
 featured: true
 date: 2022-02-20
 
+authors:
+  - name: Naga Harshita Marupaka
+    url: "https://www.linkedin.com/in/nagaharshitamarupaka/"
+    affiliations:
+      name: IIITS
+  - name: Abhinay Bathina
+    affiliations:
+      name: IIITS
+  - name: Hemanth Krishna Balineni
+    affiliations:
+      name: IIITS
+
 toc:
   - name: Problem Statement
   - name: Related works
@@ -337,9 +349,9 @@ GAN is based exclusively on Transformer architectures and does not require convo
 |**Stage**|**Layer**|**Input Shape**|**Output Shape**|
 | - | - | - | - |
 |-|Image|512|(8 x 8) x 1024|
-|<p></p><p></p><p>1</p>|<p>Block</p><p>Block</p><p>Block</p><p>Block</p><p>Block</p>|<p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p>|<p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p><p>(8 x 8) x 1024</p>|
-|<p></p><p></p><p>2</p>|<p>PixelShuffle</p><p>Block</p><p>Block</p><p>Block</p><p>Block</p>|<p>(8 x 8) x 1024</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p>|<p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p><p>(16 x 16) x 256</p>|
-|<p></p><p>3</p>|<p>PixelShuffle</p><p>Block</p><p>Block</p>|<p>(16 x 16) x 256</p><p>(32 x 32) x 64</p><p>(32 x 32) x 64</p>|<p>(32 x 32) x 64</p><p>(32 x 32) x 64</p><p>(32 x 32) x 64</p>|
+|<br><br>1<br>|Block<br>Block<br>Block<br>Block<br>Block<br>|(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>|(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>(8 x 8) x 1024<br>|
+|<br><br>2<br>|PixelShuffle<br>Block<br>Block<br>Block<br>Block<br>|(8 x 8) x 1024<br>(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>|(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>(16 x 16) x 256<br>|
+|<br>3<br>|PixelShuffle<br>Block<br>Block<br>|(16 x 16) x 256<br>(32 x 32) x 64<br>(32 x 32) x 64<br>|(32 x 32) x 64<br>(32 x 32) x 64<br>(32 x 32) x 64<br>|
 |-|Linear Layer|(32 x 32) x 64|32 x 32 x 3|
 
 **Discriminator**
@@ -348,9 +360,9 @@ GAN is based exclusively on Transformer architectures and does not require convo
 |**Stage**|**Layer**|**Input Shape**|**Output Shape**|
 | - | - | - | - |
 |-|Linear Layer|(32 x 32) x 64|(16 x 16) x 192|
-|<p></p><p></p><p>1</p>|<p>Block</p><p>Block</p><p>Block</p><p>AvgPooling</p><p>Concatenate</p>|<p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(8 x 8) x 192</p>|<p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(16 x 16) x 192</p><p>(8 x 8) x 192</p><p>(8 x 8) x 384</p>|
-|<p></p><p>2</p>|<p>Block</p><p>Block</p><p>Block</p>|<p>(8 x 8) x 384</p><p>(8 x 8) x 384</p><p>(8 x 8) x 384</p>|<p>(8 x 8) x 384</p><p>(8 x 8) x 384</p><p>(8 x 8) x 384</p>|
-|<p></p><p>-</p><p></p>|<p>Add CLS Token</p><p>Block</p><p>CLS Head</p>|<p>(8 x 8) x 384</p><p>(8 x 8 + 1) x 384</p><p>1 x 384</p>|<p>(8 x 8 + 1) x 384</p><p>(8 x 8 + 1) x 384</p><p>1</p>|
+|<br><br>1<br>|Block<br>Block<br>Block<br>AvgPooling<br>Concatenate<br>|(16 x 16) x 192<br>(16 x 16) x 192<br>(16 x 16) x 192<br>(16 x 16) x 192<br>(8 x 8) x 192<br>|(16 x 16) x 192<br>(16 x 16) x 192<br>(16 x 16) x 192<br>(8 x 8) x 192<br>(8 x 8) x 384<br>|
+|<br>2<br>|Block<br>Block<br>Block<br>|(8 x 8) x 384<br>(8 x 8) x 384<br>(8 x 8) x 384<br>|(8 x 8) x 384<br>(8 x 8) x 384<br>(8 x 8) x 384<br>|
+|<br>-<br><br>|Add CLS Token<br>Block<br>CLS Head<br>|(8 x 8) x 384<br>(8 x 8 + 1) x 384<br>1 x 384<br>|(8 x 8 + 1) x 384<br>(8 x 8 + 1) x 384<br>1<br>|
 
 
 #### Training Information
