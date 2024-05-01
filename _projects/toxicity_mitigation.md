@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Eliminating toxicity in social media
+title: Toxicity Detection and Mitigation
 description: Rephrasing the offensive comments in Reddit
 img: assets/img/7.jpg
 importance: 3

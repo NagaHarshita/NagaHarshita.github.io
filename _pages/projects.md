@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of my cool projects.
 nav: true
 nav_order: 3
-display_categories: [Project, Media, FullStack, Data Science, Deep Learning]
+display_categories: [Project]
 horizontal: false
 ---
 
