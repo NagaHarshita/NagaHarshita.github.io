@@ -6,6 +6,7 @@ tags: distill formatting
 category: Project
 featured: true
 date: 2022-02-20
+img: assets/img/6.jpg
 
 authors:
   - name: Naga Harshita Marupaka

@@ -1,12 +1,8 @@
 {
   "basics": {
     "name": "Naga Harshita Marupaka",
-    "label": "Software Engineer",
-    "image": "",
-    "email": "marupaka@usc.edu",
-    "phone": "(213) 272-3555",
-    "url": "https://nagaharshita.github.io/",
-    "summary": "Software Engineer",
+    "image": "assests/img/prof_pic.jpg",
+    "email": "nagaharshitamarupaka@gmail.com",
     "location": {
       "city": "Los Angeles",
       "countryCode": "US",
@@ -15,8 +11,7 @@
     "profiles": [
       {
         "network": "Linkedin",
-        "username": "Naga Harshita Marupaka",
-        "url": "https://www.linkedin.com/in/nagaharshitamarupaka/"
+        "username": "nagaharshitamarupaka"
       }
     ]
   },
@@ -37,7 +32,7 @@
       "institution": "Indian Institute of Information Technology",
       "location": "Sricity, India",
       "url": "https://iiits.in/",
-      "area": "Computer Science",
+      "area": "Computer Science and Engineering",
       "studyType": "Bachelor of Technology",
       "startDate": "2018-08",
       "endDate": "2022-05",
@@ -56,7 +51,7 @@
   "work": [
     {
       "name": "USC Alzheimer's Therapeutic Research Institute",
-      "position": "Machine Learning Intern",
+      "position": "Software Developer",
       "url": "https://atri.usc.edu/",
       "startDate": "2023-06",
       "endDate": "2024-05",
