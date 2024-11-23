@@ -48,6 +48,7 @@ This study aims to provide a comprehensive analysis of cold start times across m
 A "cold start" occurs when a serverless function is executed in a newly created container, as opposed to reusing an existing warm container. This process introduces latency that can significantly impact application performance, especially for latency-sensitive applications.
 
 The typical steps involved in a cold start are:
+
 1. Server allocation
 2. Container setup with specified runtime
 3. Loading of required dependencies and packages
@@ -59,6 +60,7 @@ In contrast, a warm start only involves the last step, as it reuses an existing 
 ### 1.2 Significance of the Study
 
 Understanding and mitigating cold start issues is crucial for:
+
 - Optimizing application performance
 - Improving user experience
 - Managing costs effectively in serverless environments
@@ -69,6 +71,7 @@ Understanding and mitigating cold start issues is crucial for:
 ### 2.1 Serverless Computing Landscape
 
 Serverless computing, also known as Function-as-a-Service (FaaS), has gained significant traction since its introduction. Major cloud providers offering serverless platforms include:
+
 - Amazon Web Services (AWS) with Lambda
 - Google Cloud Platform (GCP) with Cloud Functions
 - Microsoft Azure with Azure Functions
@@ -76,6 +79,7 @@ Serverless computing, also known as Function-as-a-Service (FaaS), has gained sig
 ### 2.2 Previous Research
 
 Several studies have explored cold start times in serverless environments:
+
 - Manner et al. (2018) investigated factors influencing cold starts in FaaS platforms.
 - Jackson and Clynch (2018) examined the impact of language runtime on serverless function performance and cost.
 - Cordingly et al. (2020) analyzed the implications of programming language selection for serverless data processing pipelines.
@@ -85,6 +89,7 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 ## 3. Methodology
 
 ### 3.1 Platforms and Tools
+
 - Cloud Platforms: AWS Lambda, GCP Cloud Functions, Microsoft Azure Functions
 - Development and Deployment: Serverless Framework
 - Monitoring and Logging: AWS CloudWatch, GCP Cloud Monitoring, Azure Monitor
@@ -92,21 +97,24 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 ### 3.2 Experimental Setup
 
 #### 3.2.1 Function Implementation
+
 - Implemented a simple HTTP-triggered function that returns a "Hello, World!" message
 - Developed versions in Python, Node.js, Go, and Java
 - Created variations with different memory allocations and dependency loads
 
 #### 3.2.2 Deployment Configurations
+
 - Deployed functions with and without VPC integration (where applicable)
 - Utilized different memory allocations: 128MB, 256MB, 512MB, 1024MB, 2048MB
 - Created functions with varying levels of dependencies:
-  * No dependencies
-  * Light dependencies (e.g., simple utility libraries)
-  * Heavy dependencies (e.g., data processing libraries)
+  - No dependencies
+  - Light dependencies (e.g., simple utility libraries)
+  - Heavy dependencies (e.g., data processing libraries)
 
 ### 3.3 Data Collection Process
 
 #### AWS Lambda:
+
 - Deployed functions using Serverless Framework
 - Developed a Node.js script using AWS SDK to invoke functions
 - Forced cold starts by re-deploying functions before each invocation
@@ -115,17 +123,20 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 - Each configuration invoked approximately 20 times
 
 #### GCP Cloud Functions:
+
 - Deployed functions manually through GCP Console and gcloud CLI
 - Triggered cold starts through new deployments
 - Observed 3-4 instances of deployment for each configuration
 - Collected execution times from GCP Cloud Monitoring
 
 #### Azure Functions:
+
 - Deployed functions using Azure CLI and Azure Portal
 - Implemented functions for Python and Node.js
 - Collected cold start times using Azure Application Insights
 
 ### 3.4 Variables Analyzed
+
 - Programming Languages: Python, Node.js, Go, Java
 - Memory Allocations: 128MB, 256MB, 512MB, 1024MB, 2048MB
 - Dependencies: No dependencies, light dependencies, heavy dependencies
@@ -133,6 +144,7 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 - Region: Deployed in multiple regions to account for geographical variations
 
 ### 3.5 Data Analysis
+
 - Utilized Python with pandas and matplotlib for data processing and visualization
 - Performed statistical analysis to determine significance of various factors
 - Conducted comparative analysis across platforms and configurations
@@ -152,8 +164,8 @@ Our study builds upon this foundation, providing a more recent and comprehensive
   </div>
 </div>
 
-
 **Observations:**
+
 - For functions without dependencies, cold start time showed little dependence on memory size.
 - Functions with dependencies exhibited improved cold start times with increased memory allocation.
 - The improvement was most significant when moving from 128MB to 512MB, with diminishing returns beyond 1024MB.
@@ -161,6 +173,7 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 #### 4.1.2 Programming Language Comparison
 
 **Observations:**
+
 - Python and Node.js demonstrated the fastest cold start times.
 - Java showed the slowest cold start times, particularly for smaller memory allocations.
 - Go performed well, especially for compute-intensive tasks.
@@ -177,6 +190,7 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 </div>
 
 **Observations:**
+
 - VPC integration significantly increased cold start times across all configurations.
 - The impact was more pronounced for functions with smaller memory allocations.
 
@@ -193,6 +207,7 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 </div>
 
 **Observations:**
+
 - Light dependencies had minimal impact on cold start times.
 - Heavy dependencies significantly increased cold start times, especially for smaller memory allocations.
 - Using AWS Lambda Layers for dependency management showed improved performance compared to including dependencies in the deployment package.
@@ -202,6 +217,7 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 #### 4.2.1 Language Comparison
 
 **Observations:**
+
 - Go functions demonstrated the lowest cold start times.
 - Python functions were relatively slower compared to other languages.
 - Node.js performed well, especially for functions with dependencies.
@@ -209,6 +225,7 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 #### 4.2.2 Memory Allocation Impact
 
 **Observations:**
+
 - Increasing memory allocation generally improved cold start times.
 - The impact was more significant for functions with dependencies.
 
@@ -217,12 +234,14 @@ Our study builds upon this foundation, providing a more recent and comprehensive
 #### 4.3.1 Language Comparison
 
 **Observations:**
+
 - Python functions demonstrated faster cold start times compared to Node.js.
 - The difference was more pronounced for functions with dependencies.
 
 #### 4.3.2 Consumption vs. Premium Plan
 
 **Observations:**
+
 - Premium plan showed significantly reduced cold start times.
 - The impact was more noticeable for functions with dependencies and larger memory allocations.
 
@@ -259,14 +278,16 @@ Our study reveals significant variations in cold start performance across AWS La
 Based on our comprehensive analysis, we offer the following conclusions and recommendations:
 
 ### 6.1 General Observations
+
 - Significant improvements in serverless function performance have been observed compared to previous benchmarks.
 - Programming language performance varied across platforms:
-  * AWS and Azure: Python performed best
-  * GCP: Go performed best
+  - AWS and Azure: Python performed best
+  - GCP: Go performed best
 - Adding dependencies via optimized methods (e.g., AWS Lambda Layers) improved performance.
 - Network isolation features like VPC integration can significantly impact cold start times.
 
 ### 6.2 Recommendations for Reducing Cold Start Times
+
 1. Choose the appropriate programming language based on the specific platform and use case.
 2. Optimize memory allocation, particularly for functions with dependencies.
 3. Minimize dependencies and utilize platform-specific optimization techniques.
@@ -275,6 +296,7 @@ Based on our comprehensive analysis, we offer the following conclusions and reco
 6. Carefully evaluate the need for VPC integration, considering its performance impact.
 
 ### 6.3 Best Practices for Serverless Function Design
+
 - Design functions with a single, well-defined purpose to minimize complexity and dependencies.
 - Implement effective error handling and retry mechanisms to mitigate the impact of cold starts.
 - Utilize asynchronous processing where possible to reduce the impact of cold starts on user experience.
