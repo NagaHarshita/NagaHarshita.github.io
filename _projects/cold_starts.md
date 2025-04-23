@@ -28,15 +28,6 @@ toc:
   - name: 8. References
 ---
 
-<!-- <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/cold-start/serverless_function.png' | relative_url }}" alt="Serverless Functions Diagram" title="Serverless Functions"/>
-    </div>
-</div> -->
-<div class="caption">
-    Illustration of serverless function execution flow.
-</div>
-
 ## 1. Introduction
 
 Serverless computing has emerged as a revolutionary paradigm in cloud computing, offering developers the ability to build and run applications without managing the underlying infrastructure. However, this model introduces unique challenges, particularly in terms of performance variability due to the "cold start" phenomenon.
