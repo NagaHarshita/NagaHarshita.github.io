@@ -30,7 +30,7 @@ toc:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/cold-start/serverless_function.avif' | relative_url }}" alt="Serverless Functions Diagram" title="Serverless Functions"/>
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/cold-start/serverless_function.png' | relative_url }}" alt="Serverless Functions Diagram" title="Serverless Functions"/>
     </div>
 </div>
 <div class="caption">
