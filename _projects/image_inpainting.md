@@ -1,9 +1,9 @@
 ---
 layout: distill
-title: Image Inpainting using Deep Learning
+title: Image Inpainting
 description: Image Inpainting using Deep Learning
 tags: distill formatting
-category: Project
+category: Deep Learning
 featured: true
 date: 2022-02-20
 img: assets/img/6.jpg

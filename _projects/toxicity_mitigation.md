@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Toxicity Detection and Mitigation
+title: Toxicity Mitigation
 description: Rephrasing the offensive comments in Reddit
 img: assets/img/7.jpg
 importance: 3
-category: Project
+category: Deep Learning
 redirect: https://github.com/krishnadheerajkrovi/CSCI544_NLP_Project
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: distill
-title: Cold Start in Serverless Functions
-description: Analyzing cold start on serverless functions across major cloud platforms
+title: Cold Start
+description: Analyzing cold start on serverless functions
 img: assets/img/jpeg_rose.jpg
 importance: 1
-category: Project
+category: Software Engineering
 img: assets/img/cold-start/aws-dependency-package.png
 date: 2020-12-18
 authors:

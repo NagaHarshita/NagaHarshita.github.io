@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of my cool projects.
 nav: true
 nav_order: 3
-display_categories: [Project]
+display_categories: [Deep Learning, Software Engineering]
 horizontal: false
 ---
 

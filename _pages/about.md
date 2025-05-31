@@ -2,13 +2,12 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='/cv'>Resume</a>, <a href='/projects'>Projects</a>
 profile:
   align: left
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Software Engineer</p>
+    <p>Machine Learning Engineer</p>
     <p>USC'24, IIITS'22</p>
 
 news: false # includes a list of news items

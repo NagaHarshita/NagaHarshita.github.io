@@ -2,9 +2,9 @@
 layout: page
 title: Event Finder
 description: Event Booking Application
-img: assets/img/3.jpg
+img: assets/img/event_finder/cover.png
 importance: 2
-category: Project
+category: Software Engineering
 giscus_comments: false
 redirect: https://github.com/NagaHarshita/EventFinder
 ---
